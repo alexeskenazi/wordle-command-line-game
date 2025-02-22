@@ -12,7 +12,7 @@ void Lowercase(string& str);
 int main() {
     WordProvider wordProvider;
     string guess;
-    string word = wordProvider.getRandomWord(); // Replaced with a hardcoded word for testing
+    string word = "valid"; // wordProvider.getRandomWord(); // Replaced with a hardcoded word for testing
     int guesses = 1;
     const int maxGuesses = 6;
 
@@ -29,11 +29,12 @@ int main() {
     cout << "Example:" << endl;
     cout << "Word: apple" << endl;
     cout << "Guess: place" << endl;
-    cout << "Result: _lA__" << endl << endl;
+    cout << "Result: _lA__" << endl;
+    cout << "Enter 'q' to quit the game." << endl << endl;
 
     cout << "Guess the " << wordLength << " letter word and enter q to quit." << endl;
     while (guesses <= maxGuesses) {
-        cout << "Enter your guess: ";
+        cout << "Enter Guess: ";
         cin >> guess;
         Lowercase(guess);
 
@@ -66,9 +67,9 @@ int main() {
                 }
             }
         }
-        cout << "You guessed " << match << " letters in the correct spot." << endl;
-        cout << "Your guess was: " << guess << endl;
-        cout << "Your result is: " << buffer << endl;
+        cout << "So far: " << match << " letters in the correct spot." << endl;
+        cout << "Prev Guess : " << guess << endl;
+        cout << "Result     : " << buffer << endl;
         guesses++;
     }
     if (guesses > maxGuesses) {

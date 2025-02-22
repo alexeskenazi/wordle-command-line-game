@@ -45,6 +45,10 @@ This is a command-line version of the popular word-guessing game Wordle. The gam
 
 5. Follow the on-screen instructions to play the game.
 
+## Example Output
+
+![Example Output](wordle-screenshot.png)
+
 ## File Structure
 
 - `wordle.cpp`: The main game logic.
