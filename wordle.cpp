@@ -18,6 +18,19 @@ int main() {
 
     int wordLength = word.length();
 
+    // Game instructions
+    cout << "Welcome to Wordle!" << endl;
+    cout << "You have " << maxGuesses << " attempts to guess the " << wordLength << "-letter word." << endl;
+    cout << "After each guess, you'll see which letters are correct and in the correct position (uppercase)," << endl;
+    cout << "and which letters are correct but in the wrong position (lowercase)." << endl;
+    cout << "An underscore (_) means the letter is not in the word." << endl;
+    cout << "Enter 'q' to quit the game at any time." << endl;
+    cout << "Good luck!" << endl << endl;
+    cout << "Example:" << endl;
+    cout << "Word: apple" << endl;
+    cout << "Guess: place" << endl;
+    cout << "Result: _lA__" << endl << endl;
+
     cout << "Guess the " << wordLength << " letter word and enter q to quit." << endl;
     while (guesses <= maxGuesses) {
         cout << "Enter your guess: ";
